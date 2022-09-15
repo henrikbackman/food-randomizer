@@ -1,0 +1,233 @@
+:root {
+  --settings-width: 245px;
+  --spacing: 10px;
+  --hit-spacing: 30px;
+  --hit-spacing-big: 80px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+  background-blend-mode: screen;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0;
+  margin: 0;
+}
+
+#background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(7px);
+  height: 100%;
+  left: 0;
+  mix-blend-mode: luminosity;
+  opacity: .3;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+a {
+  color: inherit;
+  opacity: .5;
+}
+
+a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label[for] {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+#settings {
+  background: rgba(255, 255, 255, .6);
+  border-radius: 6px;
+  border: 1px solid rgba(245, 245, 245, .3);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+  display: inline-block;
+  font-size: 13px;
+  margin: var(--spacing);
+  overflow: hidden;
+  padding: 30px 34px;
+  vertical-align: top;
+  width: var(--settings-width);
+}
+
+#settings:hover {
+  background: rgba(255, 255, 255, .85);
+  border: 1px solid rgba(245, 245, 245, .9);
+}
+
+#settings h2 {
+  font-weight: 100;
+  margin-top: 0;
+}
+
+#settings ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#settings li {
+  border-bottom: 1px solid rgba(215, 215, 215, .9);
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
+#settings input[type="range"] {
+  margin-top: 5px;
+  width: 100%;
+}
+
+#settings li:has(input[disabled]) label,
+#settings input[disabled] {
+  opacity: .5;
+}
+
+#settings li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#generate {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid rgba(215, 215, 215, .9);
+  cursor: pointer;
+  display: block;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 1em -34px -30px;
+  outline: 0;
+  padding: 14px 5px;
+  text-align: center;
+  width: calc(100% + (34px * 2))
+}
+
+#generate:hover {
+  background: #fff;
+}
+
+#generate i {
+  margin-left: 5px;
+  pointer-events: none;
+}
+
+#result {
+  background: rgba(255, 255, 255, .85);
+  border-radius: 6px;
+  border: 1px solid rgba(245, 245, 245, .9);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+  display: inline-block;
+  font-size: 13px;
+  margin: var(--spacing) var(--spacing) 0 0;
+  overflow: hidden;
+  /* padding: 30px 34px; */
+  vertical-align: top;
+  width: calc(100% - (var(--settings-width) + (var(--spacing) * 3)));
+}
+
+#result:empty {
+  display: none;
+}
+
+#result a {
+  display: block;
+  font-size: .8rem;
+  font-weight: 200;
+}
+
+#result a i {
+  margin-left: 7px;
+}
+
+#result ol {
+  counter-reset: recipes;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#result ol li {
+  border-bottom: 1px solid rgba(215, 215, 215, .9);
+  padding: var(--hit-spacing) calc(50px + (var(--hit-spacing) * 2)) var(--hit-spacing) var(--hit-spacing-big);
+  position: relative;
+}
+
+#result ol li:hover {
+  background: #fff;
+}
+
+#result ol li:last-child {
+  border-bottom: 0;
+}
+
+#result ol li::before {
+  content: counter(recipes);
+  counter-increment: recipes;
+  font-size: 2.5em;
+  font-weight: 100;
+  left: 0;
+  opacity: .3;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--hit-spacing-big);
+}
+
+#result ol li:hover::before {
+  opacity: 1;
+}
+
+#result h2 {
+  font-weight: 100;
+  margin: 0;
+}
+
+#result h2 + a {
+  margin-top: 3px;
+}
+
+#result .ingredients {
+  position: absolute;
+  right: var(--hit-spacing);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#result .ingredients i {
+  margin-right: 7px;
+}
+
+#result .ingredients i.fa-bacon { color: rgb(112, 0, 0); }
+#result .ingredients i.fa-carrot { color: rgb(220, 150, 0); }
+#result .ingredients i.fa-bread-slice { color: rgb(235, 199, 0); }
+#result .ingredients i.fa-rice-bowl { color: rgb(103, 103, 103); }
+#result .ingredients i.fa-fish { color: rgb(85, 99, 130); }
+#result .ingredients i.fa-cheese { color: rgb(216, 205, 3); }
+#result .ingredients i.fa-drumstick-bite { color: rgb(216, 156, 3); }

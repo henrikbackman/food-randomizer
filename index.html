@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Random food</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/5338ba39d5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <form id="settings" encoding="multipart/form-data">
+    <h2>Settings</h2>
+
+    <ul>
+      <li>
+        <label>Recept för dag eller vecka</label>
+        <label for="day">
+          <input type="radio" id="day" name="day-or-week">
+          En dag
+        </label>
+
+        <label for="week">
+          <input type="radio" id="week" name="day-or-week" checked>
+          Hel vecka (7 recept)
+        </label>
+      </li>
+      <li>
+        <label for="vegitarian">Minst antal vegitariska rätter</label>
+        <input type="range" id="vegitarian" name="vegitarian" value="5" min="0" max="7" step="1" list="tickmarks">
+      </li>
+      <li>
+        <label for="pasta">Max antal pasta-rätter</label>
+        <input type="range" id="pasta" name="pasta" value="1" min="0" max="7" step="1" list="tickmarks">
+      </li>
+      <li>
+        <label for="bread">Max antal bröd-rätter</label>
+        <input type="range" id="bread" name="bread" value="2" min="0" max="7" step="1" list="tickmarks">
+
+        <datalist id="tickmarks">
+          <option value="0" label="0"></option>
+          <option value="1"></option>
+          <option value="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4"></option>
+          <option value="5"></option>
+          <option value="6"></option>
+          <option value="7" label="7"></option>
+        </datalist>
+      </li>
+    </ul>
+
+    <button id="generate">
+      Generera
+      <i class="fa-solid fa-repeat"></i>
+    </button>
+  </form>
+
+  <div id="result"></div>
+
+  <div id="background"></div>
+
+</body>
+</html>

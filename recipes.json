@@ -1,0 +1,168 @@
+{
+  "recipes": [
+    {
+      "title": "Lax och potatis",
+      "vegitarian": false,
+      "ingredients": [
+        "fish"
+      ]
+    },
+    {
+      "title": "Lax och ris",
+      "vegitarian": false,
+      "ingredients": [
+        "fish",
+        "rice"
+      ]
+    },
+    {
+      "title": "Hel kyckling och potatis",
+      "vegitarian": false,
+      "ingredients": [
+        "chicken"
+      ]
+    },
+    {
+      "title": "Pannbiff och potatismos",
+      "vegitarian": false,
+      "book": "Bonniers stora kokbok",
+      "ingredients": [
+        "meat"
+      ]
+    },
+    {
+      "title": "Halloumistroganoff",
+      "vegitarian": true,
+      "ingredients": [
+        "cheese"
+      ]
+    },
+    {
+      "title": "Tacos",
+      "vegitarian": false,
+      "ingredients": [
+        "meat",
+        "bread"
+      ]
+    },
+    {
+      "title": "Korv med bröd",
+      "vegitarian": false,
+      "ingredients": [
+        "meat",
+        "bread"
+      ]
+    },
+    {
+      "title": "Pastasallad",
+      "vegitarian": true,
+      "ingredients": [
+        "pasta"
+      ]
+    },
+    {
+      "title": "Broccolisoppa",
+      "vegitarian": true
+    },
+    {
+      "title": "Gröt",
+      "vegitarian": true,
+      "ingredients": []
+    },
+    {
+      "title": "Ostkaka",
+      "vegitarian": true,
+      "ingredients": [
+        "cheese"
+      ]
+    },
+    {
+      "title": "Paj",
+      "vegitarian": true,
+      "ingredients": [
+        "bread"
+      ]
+    },
+    {
+      "title": "BRINNER",
+      "vegitarian": true,
+      "ingredients": [
+        "bread"
+      ]
+    },
+    {
+      "title": "Trebönsmasala med bulgur",
+      "vegitarian": true
+    },
+    {
+      "title": "Panerad halloumi med matvete",
+      "url": "https://antonschronicles.home.blog/2019/03/13/panerad-halloumi/",
+      "vegitarian": true,
+      "ingredients": [
+        "cheese"
+      ]
+    },
+    {
+      "title": "Kikisar, feta och grönkål",
+      "vegitarian": true
+    },
+    {
+      "title": "Pizza",
+      "vegitarian": true
+    },
+    {
+      "title": "Hamburgare/Halloumiburgare",
+      "vegitarian": false,
+      "ingredients": [
+        "meat",
+        "cheese",
+        "bread"
+      ]
+    },
+    {
+      "title": "Kikärtsgryta",
+      "vegitarian": true
+    },
+    {
+      "title": "Solpannkakor",
+      "vegitarian": true
+    },
+    {
+      "title": "Stek och pressad potatis",
+      "vegitarian": false,
+      "ingredients": [
+        "meat"
+      ]
+    },
+    {
+      "title": "Fisktacos",
+      "vegitarian": false,
+      "ingredients": [
+        "fish"
+      ]
+    },
+    {
+      "title": "Kötbullar och potatis",
+      "vegitarian": false,
+      "ingredients": [
+        "meat"
+      ]
+    },
+    {
+      "title": "Spagetti och köttfärssås",
+      "vegitarian": false,
+      "ingredients": [
+        "pasta",
+        "meat"
+      ]
+    },
+    {
+      "title": "Pasta med ost- och skinksås",
+      "vegitarian": false,
+      "ingredients": [
+        "pasta",
+        "meat"
+      ]
+    }
+  ]
+}
